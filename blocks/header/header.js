@@ -137,6 +137,7 @@ export default async function decorate(block) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
+        // e.preventDefault();
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
@@ -163,4 +164,15 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // highlight active nav link
+  const currentPath = window.location.pathname;
+  const navLinks = nav.querySelectorAll('.nav-sections a');
+
+  navLinks.forEach((link) => {
+    const linkPath = new URL(link.href, window.location.origin).pathname;
+    if (linkPath === currentPath || currentPath.startsWith(linkPath)) {
+      link.classList.add('is-active');
+    }
+  });
 }

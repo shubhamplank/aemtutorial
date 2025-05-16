@@ -25,3 +25,23 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+.cards > ul > li p {
+  font-size: 13px;
+  color: dimgray;
+}
+
+
+.cards > ul > li a:hover {
+  text-decoration: none;
+}
+
+.cards-card-body h3 {
+  font-size: 30px;
+}
+
+.cards-card-body h5 {
+  font-size: 14px;
+  color: teal;
+}
+

@@ -1,0 +1,65 @@
+.camper.block > div {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left content (text, images, etc.) */
+.camper.block > div > div:first-child {
+  flex: 0 0 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+/* Right side list container */
+.camper.block > div > div:last-child {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional reset for ul */
+.camper.block ul {
+  padding: 0;
+  margin: 0;
+}
+
+.camper.block ul li {
+  color: rgb(32 32 32);
+  display: block;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  height: 136px;
+  line-height: 27px;
+  list-style: none;
+  margin: 0 20px 18px; /* 20px left/right, 18px bottom */
+  text-align: left;
+  width: 263px;
+  padding: 10px 15px;
+  border-left: 4px solid #ccc; /* Default left border */
+  background-color: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Hover effect */
+.camper.block ul li:hover {
+  background-color: var(--color-yellow);
+  border-left-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.camper-wrapper > div {
+  padding: 60px 10px;
+}
+
+.camper.block h6 {
+  padding: 50px;
+  font-size: 18px;
+}
+
+.camper.block a {
+  text-decoration: none;
+}
+

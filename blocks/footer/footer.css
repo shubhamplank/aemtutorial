@@ -1,20 +1,108 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+.footer-wrapper {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-footer .footer p {
+/* Handles layout structure */
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section base styling */
+.footer .section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo icon size */
+.footer .icon img {
+  width: 128px;
+  height: auto;
+}
+
+/* Navigation list styles */
+.footer ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer ul li {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Text and links */
+.footer p {
+  margin: 10px 0;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* Heading styles */
+.footer h2,
+.footer h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+/* Copyright section */
+.footer .section.copyright {
+  font-size: 12px;
+  width: 100%;
+}
+
+/* Responsive layout for wider screens */
+@media (width >= 768px) {
+  .footer > div {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* First (icon) section gets 10%, second takes rest */
+  .footer .section:nth-child(1) {
+    width: 10%;
+  }
+
+  .footer .section:nth-child(2) {
+    width: 85%; /* remaining space with a small margin */
+  }
+
+  .footer .section.copyright {
+    width: 100%;
   }
 }

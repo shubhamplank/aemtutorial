@@ -1,0 +1,55 @@
+/* Load the custom WKND icon font */
+@font-face {
+  font-family: wknd-icon-font;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../../fonts/wknd-icon-font.ttf') format('truetype');
+}
+
+.social-buttons {
+ width: fit-content;
+  display: flex;
+  background-color: #111;
+  padding: 0.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-buttons .button.icon-only {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 3rem;
+  height: 3rem;
+  background: transparent;
+  border: none;
+  padding: 0; /* optional reset */
+}
+
+.icon {
+  font-family: wknd-icon-font;
+  font-size: 24px;
+  color: white;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon glyph mappings */
+.icon--facebook::before { content: "\e902"; }
+.icon--twitter::before  { content: "\e901"; }
+.icon--instagram::before { content: "\e903"; }
+.icon--linkedin::before  { content: "\e900"; }
+.icon--email::before     { content: "\e909"; }
+.icon--share::before     { content: "\e904"; }
+.icon--map::before       { content: "\e905"; }
+
+/* Optional hover effect */
+.button.icon-only:hover .icon {
+  color: #1da1f2; /* Accent on hover */
+}

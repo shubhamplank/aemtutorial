@@ -1,0 +1,111 @@
+/* === Font-face for WKND Icons === */
+@font-face {
+  font-family: wknd-icon-font;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('../../fonts/wknd-icon-font.ttf') format('truetype');
+}
+
+.contributors > ul,
+.contributors.block {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contributors > ul > li,
+.contributors.block > div {
+  list-style: none;
+  min-width: 300px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1em 1em 1.5em;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+/* === Image Styling === */
+.contributors .cmp-image picture {
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1em;
+  display: block;
+}
+
+.contributors .cmp-image picture img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  display: block;
+  border-radius: 0 !important;
+}
+
+.contributors .cmp-title {
+  margin: 0.25em 0 0.15em;
+}
+
+.contributors .cmp-title__text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contributors .cmp-title--black .cmp-title__text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.social-buttons {
+  width: fit-content;
+  display: flex;
+  background-color: #111;
+  justify-content: center;
+  margin: 1rem auto;
+
+}
+
+.social-buttons .button.icon-only {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 28px;
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  padding: 0;
+}
+
+.icon {
+  font-family: wknd-icon-font;
+  font-size: 1.25rem;
+  color: white;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon--facebook::before   { content: "\e902"; }
+.icon--twitter::before    { content: "\e901"; }
+.icon--instagram::before  { content: "\e903"; }
+.icon--linkedin::before   { content: "\e900"; }
+.icon--email::before      { content: "\e909"; }
+.icon--map::before        { content: "\e905"; }
+.icon--share::before      { content: "\e904"; }
+
+.button.icon-only:hover .icon {
+  color: #1da1f2;
+}
