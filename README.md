@@ -1,34 +1,60 @@
-# Your Project's Title...
-Your project's description...
+**Edge Delivery Services – EDS Tutorial Demo**
+This is the codebase for the fictional EDS Tutorial site, demonstrating Adobe's Edge Delivery Services in action. It showcases:
 
-## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+Experimentation
 
-## Documentation
+Document-Based Content Authoring
 
-Before using the aem-boilerplate, we recommand you to go through the documentation on https://www.aem.live/docs/ and more specifically:
-1. [Developer Tutorial](https://www.aem.live/developer/tutorial)
-2. [The Anatomy of a Project](https://www.aem.live/developer/anatomy-of-a-project)
-3. [Web Performance](https://www.aem.live/developer/keeping-it-100)
-4. [Markup, Sections, Blocks, and Auto Blocking](https://www.aem.live/developer/markup-sections-blocks)
+🌍 Environments
+Preview: https://main--aemtutorial--shubhamplank.aem.page/
 
-## Installation
+Live: https://main--aemtutorial--shubhamplank.aem.page/
 
-```sh
+📁 Repository
+GitHub: https://github.com/shubhamplank/aemtutorial
+
+
+🔑 Prerequisites
+Ensure the **AEM Sidekick Chrome extension** is installed.
+
+
+Right-click the Sidekick extension → View document source
+
+
+
+# Replace with your fork's live URL
+WKND_URL=https://github.com/shubhamplank/aemtutorial npm run generate-traffic
+
+
+Authoring Docs
+
+Ensure fstab.yaml points to your SharePoint/Drive folder.
+
+Modify documents in your drive.
+
+Use the AEM Sidekick to Preview and Publish.
+
+Explore:
+
+Anatomy of a Project
+Block Collection
+Query index.xls
+Redirect.xls
+Bulk meta data
+Meta data
+
+💻 Local Development
+Clone your forked repo locally:
+
+git clone https://github.com/shubhamplank/aemtutorial
+cd edstutorial
 npm i
-```
+npm install -g @adobe/helix-cli
+Opens browser at http://localhost:3000
 
-## Linting
+Start building in your IDE.
 
-```sh
-npm run lint
-```
+📚 Resources
+Adobe Edge Delivery Services
 
-## Local development
 
-1. Create a new repository based on the `aem-boilerplate` template and add a mountpoint in the `fstab.yaml`
-1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
-1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `{repo}` directory in your favorite IDE and start coding :)
