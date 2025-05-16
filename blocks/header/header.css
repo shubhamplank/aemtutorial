@@ -50,29 +50,21 @@ header nav p {
   line-height: 1;
 }
 
+/* Removed duplicate selector */
 header nav ul a:any-link {
   color: currentcolor;
   text-decoration: none;
   font-size: 14px;
-
 }
-
-header nav ul a:any-link {
-  color: currentcolor;
-  text-decoration: none;
-  font-size: 14px;
-
-}
-
 
 header nav ul a .is-active {
   color: currentcolor;
   text-decoration: none;
   font-size: 14px;
-
 }
 
-header nav ul a:any-link:hover, header nav ul a.is-active {
+header nav ul a:any-link:hover,
+header nav ul a.is-active {
   color: black;
   padding: 15px 17px;
   background-color: var(--color-yellow);
@@ -291,4 +283,17 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+.nav-search-input {
+  width: 12rem;
+  height: 34px;
+  padding: 8px 12px 8px 25px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: url("/icons/icons-search.png") no-repeat left center;
+  background-size: 18px;
+  background-color: #ebebeb8a;
 }

@@ -137,7 +137,6 @@ export default async function decorate(block) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       navSection.addEventListener('click', () => {
-        // e.preventDefault();
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
@@ -175,4 +174,13 @@ export default async function decorate(block) {
       link.classList.add('is-active');
     }
   });
+
+  // Search input with search icon inside
+  const navTools = nav.querySelector('.nav-tools');
+  const searchWrapper = document.createElement('div');
+  searchWrapper.className = 'nav-search';
+  searchWrapper.innerHTML = `
+    <input type="text" placeholder="SEARCH" class="nav-search-input" aria-label="Search" />
+  `;
+  navTools.appendChild(searchWrapper);
 }
