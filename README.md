@@ -8,7 +8,7 @@ Document-Based Content Authoring
 🌍 Environments
 Preview: https://main--aemtutorial--shubhamplank.aem.page/
 
-Live: https://main--aemtutorial--shubhamplank.aem.page/
+Live: https://main--aemtutorial--shubhamplank.aem.live/
 
 📁 Repository
 GitHub: https://github.com/shubhamplank/aemtutorial
